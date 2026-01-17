@@ -275,7 +275,8 @@ states = {
 
 Now we can define our transition function as a mapping from inputs to outputs. This activity is very important for concept building at this stage and will also help us write better and testable functions when we write actual programs.
 
-> Fun Fact (for the curious ones): In this case, since the Effects do not determine the execution of the machine, they are just outputs, hence this problem is being solved via a Finite State Machine (FSM). Also, in this case the effects are only outputs and are being associated with state, hence, this is a variation of Moore Machine.
+> Fun Fact (for the curious):<br/>In this case, the effects do not influence the execution of the machine; they are merely outputs. As a result, the problem is modeled using a Finite State Machine (FSM). Since the outputs are associated only with the current state and not with the transitions, this is a variation of a Moore machine.
+
 
 | Current State | Input Condition | Next State | Effect |
 |---------------|----------------|------------|---------|
@@ -514,19 +515,27 @@ Your state machine is the skeleton; the effects are the flesh. The machine tells
 This is why state machines are powerful: they let you reason about **what states exist** and **how to move between them** separately from **what those states mean** in the real world.
 
 
-# Why is this exercise important ?
+# Why is this exercise important?
 
-In the real world, a lot of production systems can be modelled as State Machines. State Machines is the fundamental foundation, that led to the ideation of a computer during a time when Computer weren't even a thing.
+Many real world production systems can be naturally modeled as state machines. In fact, state machines form one of the earliest conceptual foundations of computing, long before modern computers even existed.
 
-State machines are not just limited to compilers and interpreters. They are everywhere, even in Distributed Systems.
+State machines are not limited to compilers or interpreters. They show up everywhere in practice, especially in distributed systems.
 
-Few of the examples of state machine based systems are *Distributed Systems* themselves:
+Some concrete examples of systems that are best understood through state machines are:
 
-1. We model complex workflows that require choreography from multiple services as state machines for example: payments processing.
-2. In stateful systems, such as Kafka, Replication in DBs etc. State Machines help us in understanding failure modes in a system.
-3. You would end learning TLA+ for modelling systems behaviour at some point in your tech career, where state machines are important. This modelling is useful in understanding the failure modes, which will anyway enhance your understanding.
-4. Network Firewalls and Protocols are nothing short of a state machine, for example: `netfilter`, `conntrack` etc. 
+1. **Distributed workflows**
+   Complex workflows that involve coordination across multiple services such as payment processing or order fulfillment are often modeled as state machines to make transitions and invariants explicit.
 
+2. **Stateful infrastructure systems**
+   Systems like Kafka, database replication, and consensus protocols rely heavily on state. Modeling them as state machines helps reason about correctness and, more importantly, failure modes.
+
+3. **Formal system modeling**
+   Tools like TLA+ are commonly used to model and reason about system behavior. At their core, these models are state machines. Learning to think this way makes it easier to understand and validate system guarantees.
+
+4. **Networking and security**
+   Network protocols and firewalls are effectively state machines. Components such as `netfilter` and `conntrack` track connection state to decide how packets should be handled.
+
+Understanding state machines gives you a powerful mental model to reason about complex systems, especially when things go wrong.
 
 # Where to go from here ?
 
