@@ -33,6 +33,7 @@ Thus, I thought to cook up a small tutorial explaining the same. The very minima
 ### What is a state?
 
 **Quick Definition:** A state is a specific condition, status, or mode a system can be in at any given time. It represents a snapshot of the system's situation—like "playing," "paused," or "stopped" for a video player. The system waits in this state for an event to trigger a change (called a transition) to another state. A state machine can only be in one state at once, and these states define what actions can occur and how the system behaves when different inputs (events) are received.
+(Citation: Definition generated via Gemini)
 
 Now let's dig deeper with an example.
 
@@ -546,4 +547,4 @@ Now you understand how a state machine translates to code:
 4. Calculate inputs from effects
 5. Run the machine in a loop
 
-Try converting this to a functional language like Clojure or Haskell—you'll find the same patterns emerge, just with different syntax. The state machine thinking transcends the language.
+Try converting this to a functional language like Clojure or Haskell - you'll find the same patterns emerge, just with different syntax. The state machine thinking transcends the language.
