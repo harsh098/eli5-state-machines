@@ -508,7 +508,7 @@ The beauty of this approach is **separation**:
 
 ### Another important Observation
 1. We did not use any FP specific terminology here. 
-2. We did use the word `effects` but have not even discussed about `side-effects` and our code is still very much free of `side-effects` (_Try searching about "Side Effects in Programming"_).
+2. We did use the word `effects` but have not even discussed about `side-effects` and our code is still very much free of `side-effects` (except I/O ops in `play()` function) (_Try searching about "Side Effects in Programming"_).
 3. We did not get into nitty-gritties of what are formal languages, Automata, Turing Completeness etc. and we yet, have a simple mental-model now.
 
 Your state machine is the skeleton; the effects are the flesh. The machine tells you what's happening logically, effects make it visible and interactive.
